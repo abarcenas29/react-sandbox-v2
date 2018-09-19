@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development && rimraf ./build/* && webpack-dev-server --mode development --open --hot",
-    "build:prod": "rimraf ./build/* && webpack --mode production --progress"
+    "build:prod": "rimraf ./build/* && webpack --mode production --progress",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
     "immutable": "3.8.2",
@@ -22,6 +23,7 @@
     "rxjs": "6.3.2"
   },
   "devDependencies": {
+    "@storybook/react": "3.4.11",
     "autoprefixer": "9.1.1",
     "babel-core": "6.26.3",
     "babel-loader": "7.1.5",
