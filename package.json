@@ -32,6 +32,7 @@
     "babel-plugin-syntax-dynamic-import": "6.18.0",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-env": "1.7.0",
+    "babel-preset-flow": "6.23.0",
     "babel-preset-react": "6.24.1",
     "cross-env": "5.2.0",
     "css-loader": "1.0.0",
@@ -43,6 +44,7 @@
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-standard": "3.1.0",
     "file-loader": "1.1.11",
+    "flow-bin": "0.81.0",
     "html-webpack-plugin": "3.2.0",
     "mini-css-extract-plugin": "0.4.1",
     "node-sass": "4.9.3",
@@ -62,7 +64,8 @@
   "babel": {
     "presets": [
       "env",
-      "react"
+      "react",
+      "flow"
     ],
     "plugins": [
       "transform-object-rest-spread",

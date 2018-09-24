@@ -1,11 +1,11 @@
-import './styles/global.scss';
+import './styles/global.scss'
 
-import React from 'React';
+import React from 'React'
 import { hot } from 'react-hot-loader'
 import ReactDOM from 'react-dom'
 
 import routes from './routes'
-import { BrowserRouter as Router , Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const env = process.env.NODE_ENV
 
