@@ -8,6 +8,7 @@ module.exports = (env, options) => {
   
   const config = {
     entry: './app/index.js',
+    target: "web",
     output: {
       path: path.join(__dirname, 'build'),
       filename: '[name].bundle.js',
