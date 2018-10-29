@@ -1,6 +1,6 @@
 import './styles/global.scss'
 
-import React from 'React'
+import React from 'react'
 import { hot } from 'react-hot-loader'
 import ReactDOM from 'react-dom'
 
