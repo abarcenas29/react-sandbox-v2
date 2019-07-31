@@ -3,21 +3,18 @@
 An updated version of the [react-sandbox](https://github.com/abarcenas29/react-sandbox) with updated technologies and React v16
 
 ```
-This is client-centric version. Bundle server-side rendering will soon to follow.
+This is client-centric version. For SSR [use this](https://github.com/abarcenas29/ssr-react-boilerplace).
 ```
 
 ## Features
 
-* React v16.x
-* Styled Components
-* React Router v4
-* Webpack 4
 * PrettierJS
-
-## Additional Features To Be Added
-
+* React Router v4
+* React v16.x
 * Redux
 * Redux-Observable
+* Styled Components
+* Webpack 4
 
 ## Submodules
 
