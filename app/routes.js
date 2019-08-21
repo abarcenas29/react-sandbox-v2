@@ -1,21 +1,8 @@
-import React from 'react'
-import Loadable from 'react-loadable'
+import { lazy } from 'react'
 
-const env = process.env.NODE_ENV
+const LoadHome = lazy(() => import('Containers/Home' /* webpackChunkName: "Container-Home" */))
 
-const Loader = () => {
-  return (<p>Page is loading</p>)
-}
-
-const LoadHome = Loadable({
-  loader: () => import('Containers/Home' /* webpackChunkName: "Container-Home" */),
-  loading: Loader
-})
-
-const LoadAbout = Loadable({
-  loader: () => import('Containers/About' /* webpackChunkName: "Container-About" */),
-  loading: Loader
-})
+const LoadAbout = lazy(() => import('Containers/About' /* webpackChunkName: "Container-About" */))
 
 const routes = [
   {
@@ -29,4 +16,4 @@ const routes = [
   }
 ]
 
-export default routes;
+export default routes

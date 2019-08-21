@@ -1,6 +1,6 @@
 import './styles/global.scss'
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import { hot } from 'react-hot-loader'
 import ReactDOM from 'react-dom'
 
@@ -12,9 +12,11 @@ const env = process.env.NODE_ENV
 const App = () => {
   return (
     <Router>
-      <Switch>
-        {routes.map((route, i) => <Route key={i} {...route} />)}
-      </Switch>
+      <Suspense fallback={<p>Loading</p>}>
+        <Switch>
+          {routes.map((route, i) => <Route key={i} {...route} />)}
+        </Switch>
+      </Suspense>
     </Router>
   )
 }
