@@ -21,6 +21,7 @@
     "react-redux-toastr": "*",
     "redux": "*",
     "redux-observable": "*",
+    "redux-actions": "*",
     "rxjs": "*"
   },
   "devDependencies": {
@@ -37,7 +38,6 @@
     "babel-eslint": "*",
     "babel-loader": "*",
     "babel-preset-env": "*",
-    "babel-preset-flow": "*",
     "babel-preset-react": "*",
     "cross-env": "*",
     "css-loader": "*",
@@ -69,17 +69,19 @@
     "webpack-dev-server": "*"
   },
   "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-syntax-dynamic-import"
+    ],
     "env": {
       "development": {
-        "presets": [
-          "@babel/preset-env",
-          "@babel/preset-react",
-          "@babel/preset-flow"
-        ],
         "plugins": [
-          "@babel/plugin-proposal-class-properties",
-          "@babel/plugin-proposal-object-rest-spread",
-          "@babel/plugin-syntax-dynamic-import"
+          "react-hot-loader/babel"
         ]
       },
       "production": {
@@ -89,26 +91,7 @@
             {
               "modules": false
             }
-          ],
-          "@babel/preset-react",
-          "@babel/preset-flow"
-        ],
-        "plugins": [
-          "@babel/plugin-proposal-object-rest-spread",
-          "react-hot-loader/babel",
-          "@babel/plugin-syntax-dynamic-import"
-        ]
-      },
-      "test": {
-        "presets": [
-          "@babel/preset-env",
-          "@babel/preset-react",
-          "@babel/preset-flow"
-        ],
-        "plugins": [
-          "@babel/plugin-proposal-class-properties",
-          "@babel/plugin-proposal-object-rest-spread",
-          "@babel/plugin-syntax-dynamic-import"
+          ]
         ]
       }
     }
