@@ -33,6 +33,7 @@
     "@babel/preset-env": "*",
     "@babel/preset-flow": "*",
     "@babel/preset-react": "*",
+    "@hot-loader/react-dom": "*",
     "autoprefixer": "*",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "*",
