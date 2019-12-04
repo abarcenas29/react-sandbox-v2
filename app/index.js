@@ -18,7 +18,12 @@ const App = () => {
       <Router>
         <Suspense fallback={<p>Loading</p>}>
           <Switch>
-            {routes.map((route, i) => <RouteWithSubroutes key={i} {...route} />)}
+            {
+              routes.map(
+                (route, i) =>
+                  <RouteWithSubroutes key={i} {...route} />
+              )
+            }
           </Switch>
         </Suspense>
       </Router>
@@ -34,4 +39,13 @@ if (env === 'development') {
   ReactDOM.render(<HotApp />, $app)
 } else {
   ReactDOM.render(<App />, $app)
+}
+
+// Enable Service Worker
+if ('serviceWorker' in navigator) {
+  navigator
+    .serviceWorker
+    .register('sw.js')
+    .then(registration => console.log(registration))
+    .catch(console.error)
 }

@@ -13,19 +13,22 @@
     "test": "cross-env NODE_ENV=test && jest --colors"
   },
   "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "crypto-js": "^3.1.9-1",
+    "final-form": "*",
     "graphql": "*",
     "react": "*",
     "react-dom": "*",
-    "final-form": "*",
     "react-final-form": "*",
     "react-helmet": "*",
     "react-intl": "*",
     "react-redux": "*",
     "react-redux-toastr": "*",
+    "react-relay": "*",
     "redux": "*",
     "redux-actions": "*",
-    "react-relay": "*",
-    "rxjs": "*"
+    "rxjs": "*",
+    "workbox-webpack-plugin": "^4.3.1"
   },
   "devDependencies": {
     "@babel/core": "*",
@@ -43,7 +46,7 @@
     "babel-loader": "*",
     "babel-preset-env": "*",
     "babel-preset-react": "*",
-    "copy-webpack-plugin": "*",
+    "copy-webpack-plugin": "^5.1.1",
     "cross-env": "*",
     "css-loader": "*",
     "dotenv": "*",
@@ -67,13 +70,13 @@
     "react-loadable": "*",
     "react-router-dom": "*",
     "redux-devtools-extension": "*",
+    "relay-compiler": "^8.0.0",
     "relay-config": "*",
     "relay-hooks": "*",
     "relay-runtime": "*",
-    "relay-compiler": "*",
     "rimraf": "*",
-    "sass": "*",
     "sanitize.css": "*",
+    "sass": "*",
     "sass-loader": "*",
     "style-loader": "*",
     "styled-components": "*",
@@ -118,6 +121,10 @@
     "plugins": [
       "react"
     ],
+    "globals": {
+      "workbox": true,
+      "self": true
+    },
     "rules": {
       "react/prop-types": 0,
       "camelcase": [
