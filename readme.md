@@ -13,6 +13,7 @@ This is client-centric version. For SSR [use this](https://github.com/abarcenas2
 * React v16.x
 * Redux
 * Redux-Observable
+* Relay
 * Styled Components
 * Webpack 4
 

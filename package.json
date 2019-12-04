@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Updated version of the React-Sandbox with updated packages and methods",
   "main": "index.js",
+  "repository": "https://github.com/abarcenas29/react-sandbox-v2",
   "license": "MIT",
   "scripts": {
     "git:submodules": "git submodule update --init --recursive",
@@ -12,16 +13,18 @@
     "test": "cross-env NODE_ENV=test && jest --colors"
   },
   "dependencies": {
+    "graphql": "*",
     "react": "*",
     "react-dom": "*",
+    "final-form": "*",
     "react-final-form": "*",
     "react-helmet": "*",
     "react-intl": "*",
     "react-redux": "*",
     "react-redux-toastr": "*",
     "redux": "*",
-    "redux-observable": "*",
     "redux-actions": "*",
+    "react-relay": "*",
     "rxjs": "*"
   },
   "devDependencies": {
@@ -40,9 +43,11 @@
     "babel-loader": "*",
     "babel-preset-env": "*",
     "babel-preset-react": "*",
+    "copy-webpack-plugin": "*",
     "cross-env": "*",
     "css-loader": "*",
     "dotenv": "*",
+    "dotenv-webpack": "*",
     "eslint": "*",
     "eslint-config-standard": "*",
     "eslint-config-standard-react": "*",
@@ -58,11 +63,17 @@
     "node-sass": "*",
     "postcss-loader": "*",
     "prettier": "*",
-    "redux-devtools-extension": "*",
     "react-hot-loader": "*",
     "react-loadable": "*",
     "react-router-dom": "*",
+    "redux-devtools-extension": "*",
+    "relay-config": "*",
+    "relay-hooks": "*",
+    "relay-runtime": "*",
+    "relay-compiler": "*",
     "rimraf": "*",
+    "sass": "*",
+    "sanitize.css": "*",
     "sass-loader": "*",
     "style-loader": "*",
     "styled-components": "*",
@@ -117,27 +128,29 @@
       ]
     }
   },
-  "sideEffects": false,
   "jest": {
     "verbose": true,
     "moduleNameMapper": {
-      "Components(.*)$": "<rootDir>/app/components$1",
-      "Containers(.*)$": "<rootDir>/app/containers$1",
-      "Helpers(.*)$": "<rootDir>/app/helpers$1",
-      "Modules(.*)$": "<rootDir>/app/modules$1",
-      "Styles(.*)$": "<rootDir>/app/styles$1",
+      "^Components(.*)$": "<rootDir>/app/components$1",
+      "^Containers(.*)$": "<rootDir>/app/containers$1",
+      "^Helpers(.*)$": "<rootDir>/app/helpers$1",
+      "^Modules(.*)$": "<rootDir>/app/modules$1",
+      "^Styles(.*)$": "<rootDir>/app/styles$1",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
   "prettier": {
-    "tabWidth": 2,
-    "useTabs": false,
     "semi": false,
     "singleQute": true,
-    "trailingComma": "none"
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
-  }
+  },
+  "testPathIgnorePatterns": [
+    "<rootDir>/node_modules"
+  ]
 }
