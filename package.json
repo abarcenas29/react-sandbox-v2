@@ -8,7 +8,7 @@
   "scripts": {
     "git:submodules": "git submodule update --init --recursive",
     "build:prod": "rimraf ./build/* && cross-env NODE_ENV=production && webpack --config internals/webpack.config.js --mode production --progress",
-    "postinstall": "rimraf node_modules/jest-runtime/node_modules/babel-core node_modules/jest-config/node_modules/babel-core && yarn run git:submodules",
+    "postinstall": "rimraf node_modules/jest-runtime/node_modules/babel-core node_modules/jest-config/node_modules/babel-core && npm run git:submodules",
     "start:dev": "cross-env NODE_ENV=development && rimraf ./build/* && webpack-dev-server --config internals/webpack.config.js --mode development --open --hot",
     "test": "cross-env NODE_ENV=test && jest --colors"
   },
