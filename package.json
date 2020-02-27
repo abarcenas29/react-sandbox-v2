@@ -22,12 +22,6 @@
     "react-final-form": "*",
     "react-helmet": "*",
     "react-intl": "*",
-    "react-redux": "*",
-    "react-redux-toastr": "*",
-    "react-relay": "*",
-    "redux": "*",
-    "redux-actions": "*",
-    "rxjs": "*",
     "workbox-webpack-plugin": "^4.3.1"
   },
   "devDependencies": {
@@ -40,6 +34,8 @@
     "@babel/preset-flow": "*",
     "@babel/preset-react": "*",
     "@hot-loader/react-dom": "*",
+    "tailwindcss": "*",
+    "purgecss-webpack-plugin": "*",
     "autoprefixer": "*",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "*",
@@ -153,9 +149,6 @@
     "tabWidth": 2,
     "trailingComma": "none",
     "useTabs": false
-  },
-  "resolutions": {
-    "babel-core": "7.0.0-bridge.0"
   },
   "testPathIgnorePatterns": [
     "<rootDir>/node_modules"
