@@ -60,7 +60,7 @@
     "jest": "*",
     "live-server-spa": "*",
     "mini-css-extract-plugin": "*",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "*",
     "postcss-loader": "*",
     "prettier": "*",
